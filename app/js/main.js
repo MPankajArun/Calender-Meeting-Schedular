@@ -47,6 +47,19 @@
     new RedmartSchedular.Calendar(events, {
       container: 'calendar-event-container'
     }).render();
+    showAlertMessage(); 
   });
+
+  function showAlertMessage() {
+    document.querySelector(".webform-confirmation").style.display = 'inline-flex';
+    hideAlertMessage();
+  }
+
+  function hideAlertMessage() {
+    setTimeout(() => {
+      document.querySelector(".webform-confirmation").style.display = 'none';
+    }, 1000);
+    
+  }
 
 }))(window, document);
