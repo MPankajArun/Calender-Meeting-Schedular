@@ -24,12 +24,29 @@
     
   ];
 
-  const calendar = new RedmartSchedular.Calendar(events, {
+  var calendar = new RedmartSchedular.Calendar(events, {
     container: 'calendar-event-container'
   });
 
   window.onload = () => {
     calendar.render();
+    calendar = null;
+    delete calendar;
   };
+
+  document.getElementById('submit-btn').addEventListener('click', function(event) {
+    var eventObject = {
+      'id': ++events.length,
+      'start': parseInt(document.querySelector("input[name='start']").value, 10),
+      'end': parseInt(document.querySelector("input[name='end']").value, 10),
+      'title': document.querySelector("input[name='title']").value,
+      'location': document.querySelector("input[name='location']").value
+      // discription: document.querySelector("input[name='discription']").value
+    }
+    events.push(eventObject);
+    new RedmartSchedular.Calendar(events, {
+      container: 'calendar-event-container'
+    }).render();
+  });
 
 }))(window, document);

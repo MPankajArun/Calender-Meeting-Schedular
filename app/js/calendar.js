@@ -10,11 +10,25 @@
       eventTemplate: '<div class="calendar-event" style="top: <%= top %>px; left: <%= left %>px; width: <%= width %>px; background-color:<%= color %>;">' +
                       '<div class="calendar-event-wrapper" style="height: <%= height %>px;">' +
                         '<div class="calendar-event-content">' +
-                          '<a class="calendar-event-title" href="#modal-one"><%= title %></a>' +
+                          '<a class="calendar-event-title" href="#modal-one<%= id %>"><%= title %></a>' +
                           '<div class="calendar-event-location"><%= location %></div>' +
                         '</div>' +
                       '</div>' +
-                    '</div>'
+                    '</div>' +
+                    '<div class="modal" id="modal-one<%= id %>" aria-hidden="true">' +
+                    '<div class="modal-dialog">' +
+                      '<div class="modal-header">' +
+                        '<h2><%= title %></h2>' +
+                        '<a href="#" class="btn-close" aria-hidden="true">×</a>' +
+                      '</div>' +
+                      '<div class="modal-body">' +
+                        '<p><%= location %></p>' +
+                      '</div>' +
+                      '<div class="modal-footer">' +
+                        '<a href="#" class="btn">Close</a>' +
+                      '</div>' +
+                    '</div>' +
+                 ' </div>' 
     };
 
     /**
@@ -71,7 +85,6 @@
         this.eventCollection.calculatePositions();
 
         // Return the raw events for testing purposes
-        console.log(this.eventCollection.raw());
         return this.eventCollection.raw();
       }
 
@@ -141,9 +154,10 @@
           throw Error('At least one event is required.');
 
         this.events = [];
-        for (let i = 0, l = events.length; i < l; ++i) {
-          // events[i].color = this.events.getRandomColor();
-          this.events.push( new Calendar.Event(events[i]) );
+        for (let i = 0; i < events.length; ++i) {
+          if(events[i]) {
+            this.events.push( new Calendar.Event(events[i]));
+          }
         }
 
         // The events must be sorted by their start values in order for the
@@ -383,11 +397,11 @@
      */
     class Event {
       constructor(event) {
-        if (!event.hasOwnProperty('id'))
+        if (!event.id)
           throw TypeError('Event id is required.');
-        if (!event.hasOwnProperty('start'))
+        if (!event.start)
           throw TypeError('Event start is required.');
-        if (!event.hasOwnProperty('end'))
+        if (!event.end)
           throw TypeError('Event end is required.');
         if (event.end - event.start <= 0)
           throw TypeError('Event end time must be greater than start time.');
