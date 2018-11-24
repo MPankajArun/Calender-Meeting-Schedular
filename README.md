@@ -1,1 +1,1 @@
-# Calender-Meeting-Schedular
+# Calendar Meeting Schedular

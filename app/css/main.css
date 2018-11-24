@@ -1,0 +1,239 @@
+
+a {
+  cursor: pointer;
+  color: #3b5998;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  font-size: 11px;
+  font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+  color: #333;
+  line-height: 1.28;
+  text-align: left;
+  direction: ltr;
+}
+
+.calendar {
+  width: 600px;
+}
+
+.calendar .calendar-time-column {
+  width: 59px;
+  float: left;
+  line-height: 1;
+  height: 1440px;
+}
+
+.calendar .calendar-time {
+  margin-bottom: 49px;
+}
+
+.calendar .calendar-time-whole {
+  font-size: 13px;
+  font-weight: bold;
+  color: #7f7f7f;
+  text-align: right;
+}
+
+.calendar .calendar-time-whole span {
+  padding-left: 6px;
+  font-weight: normal;
+  color: #a7a7a7;
+  font-size: 9px;
+}
+
+.calendar .calendar-time-half {
+  font-size: 9px;
+  color: #a7a7a7;
+  text-align: right;
+}
+
+.calendar .calendar-event-container {
+  position: relative;
+  width: 520px;
+  height: 1440px;
+  margin: 7px 0 0 10px;
+  float: left;
+  background-color: #ececec;
+  border-left: 1px solid #d5d5d5;
+}
+
+.calendar .calendar-event {
+  position: absolute;
+  /* background-color: #4b6ea8; */
+}
+
+.calendar .calendar-event-wrapper {
+  margin-left: 4px;
+  background-color: #ffffff;
+  border-top: 1px solid #d5d5d5;
+  border-right: 1px solid #d5d5d5;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.calendar .calendar-event-content {
+  padding: 4px 6px 4px 5px;
+}
+
+.calendar a.calendar-event-title {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  color: #4b6ea8;
+}
+
+.calendar .calendar-event-location {
+  font-size: 9px;
+  color: #a0a0a0;
+}
+
+.calender-input-container {
+  display: inline-block;
+  max-width:550px;
+  margin-left: 20px;
+  margin-top: 5px;
+  background-color: #ececec;
+  padding:20px;
+  box-sizing:border-box;
+  box-shadow:0px 3px 6px rgba(0, 0, 0, 0.5);
+  font-size:16px;
+  border-radius:3px;
+  animation: 1.25s flyin ease;
+}
+
+.inputs{
+  position:relative;
+  float:left;
+  width:100%;
+  
+  box-sizing:border-box;
+  padding:10px 0px 10px 10px;
+}
+.inputs.half{ width:50%; }
+
+.inputs input{
+  width:100%;
+  padding:20px 0px 4px 0px;
+  background:transparent;
+  
+  box-sizing:border-box;
+  border-color: #AAA;
+  border-width: 0px 0px 2px 0px;
+  color:#000;
+  outline:none;
+  transition:all 0.3s;
+  padding:0px 15x;
+}
+
+.inputs input:focus{
+  border-bottom:2px solid #000;
+}
+
+
+
+.inputs input + label:after{
+  content: " ";
+}
+
+
+.inputs input:placeholder-shown + label{
+  color:#999;
+  left:14px;
+  bottom:-8px;
+}
+.inputs input:focus + label,
+.inputs input + label{
+  position:absolute;
+  bottom:14px;
+  left:10px;
+  color:#999;
+  line-height:60px;
+  pointer-events:none;
+  transition: all 0.25s;
+  font-size:14px;
+}
+
+button{
+  border:0px;
+  padding:10px 40px;
+  border-radius:3px;
+  background:#465;
+  color:white;
+  float:right;
+  font-weight:bold;
+  border:1px solid transparent;
+  transition:all 0.25s;
+}
+button:hover{
+  border:1px solid #999;
+}
+
+@keyframes flyin{
+  from{ transform: translateY(100%); opacity:0; }
+}
+
+.modal:before {
+  content: "";
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.modal:target:before {
+  display: block;
+}
+.modal:target .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  top: 20%;
+}
+.modal-dialog {
+  background: #fefefe;
+  border: #333333 solid 1px;
+  border-radius: 5px;
+  margin-left: -200px;
+  position: fixed;
+  left: 50%;
+  top: -50%;
+  z-index: 11;
+  width: 360px;
+  -webkit-transform: translate(0, -500%);
+  -ms-transform: translate(0, -500%);
+  transform: translate(0, -500%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.modal-body {
+  padding: 20px;
+}
+.modal-header,
+.modal-footer {
+  padding: 10px 20px;
+}
+.modal-header {
+  border-bottom: #eeeeee solid 1px;
+}
+.modal-header h2 {
+  font-size: 20px;
+}
+.modal-footer {
+  border-top: #eeeeee solid 1px;
+  text-align: right;
+}
+.btn-close {
+  top: 10px;
+  position: absolute;
+  left: 340px;
+}
