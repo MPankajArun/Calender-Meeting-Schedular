@@ -22,7 +22,7 @@
                         '<a href="#" class="btn-close" aria-hidden="true">×</a>' +
                       '</div>' +
                       '<div class="modal-body">' +
-                        '<p><%= location %></p>' +
+                        '<p><%= discription %></p>' +
                       '</div>' +
                       '<div class="modal-footer">' +
                         '<a href="#" class="btn">Close</a>' +
@@ -412,6 +412,7 @@
         this.color = this.getRandomColor();
         this.title = event.title;
         this.location = event.location;
+        this.discription = event.discription;
         this.top = null;
         this.left = null;
         this.width = null;
