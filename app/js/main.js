@@ -1,8 +1,6 @@
 
 (((window, document) => {
 
-  // Note: See spec/unit/CalendarSpec.js for more test data
-
   // Events from part 1
   // var events = [
   //   { id: 1, start: 60, end: 179 },

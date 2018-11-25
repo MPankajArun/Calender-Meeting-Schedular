@@ -84,7 +84,7 @@
         this.eventCollection.calculateCollisionGroups();
         this.eventCollection.calculatePositions();
 
-        console.log(this.eventCollection.raw());
+        console.log(`Part 1 Output:- `, this.eventCollection.raw());
         return this.eventCollection.raw();
       }
 

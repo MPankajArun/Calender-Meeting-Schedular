@@ -37,13 +37,19 @@ Build a webpage that uses the function from PART 1, to show the following meetin
 
 Calendar is a class of the RedmartSchedular module. EventCollection and Event are classes of Calendar properties so that they may be referenced via Calendar.EventCollection and Calendar.Event, respectively. A class for the Event exists beyond what the normal event object so that it will be more robust as features are added to the Calendar and the Event object has more functionality added to it.
 
+#### How to Run
+Navigate to `app/index.html` and open in any browser of your choice. Also go to Developer Console to see Part 1 Output.
+
 ### Dependencies
 
 The only dependency for the calendar is [Lo-Dash](https://github.com/bestiejs/lodash), an optimized version of the JavaScript utility library, [Underscore.js](https://github.com/documentcloud/underscore). The library is used for simple operations such as mapping and sorting, and nothing significant.
 
 ### Testing
 
-Unit tests are used to verify the expected output of the left and top positions as well as the widths and heights of the events after processing. A few sample event collections are tested. Unit tests are performed using [Jasmine](https://github.com/pivotal/jasmine) by navigating to `spec/SpecRunner.html` in the browser.
+Unit tests are used to verify the expected output of the left and top positions as well as the widths and heights of the events after processing. A few sample event collections are tested. 
+
+#### How to Run
+Unit tests are performed using [Jasmine](https://github.com/pivotal/jasmine) by navigating to `spec/SpecRunner.html` in the browser.
 
 ### ToDo (Future Scope)
 
