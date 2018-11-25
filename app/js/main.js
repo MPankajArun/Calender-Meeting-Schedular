@@ -18,10 +18,9 @@
     { id: 1, start: 60, end: 120 , title: 'UI/UX Meeting', location: 'Technica' , discription: 'Putting UX/UI meetings back on the calendar on a monthly basis. The agenda is up to us to decide as a team, so if you have topics for future meetings, let\'s talk about them ahead of time so that we can have productive and valuable meetings'},
     { id: 2, start: 150, end: 270, title: 'Tachyons StandUp', location: 'Tachyons Bay', discription: 'Daily upadates of each team member and possible risk/dependencies factors'},
     { id: 3, start: 240, end: 300, title: 'Oauth Grooming', location: 'Nexus', discription: 'Lets have grooming about how to use oauth features and which services we should consider'}, 
-    { id: 4, start: 200, end: 360, title: 'Local SOS', location: 'Marina Bay', discription: 'Putting this meeting to discuss each teams current team updates'}, 
+    { id: 4, start: 200, end: 360, title: 'Local SOS', location: 'Marina Bay', discription: 'Putting this meeting to discuss each teams current user stories updates'}, 
     { id: 5, start: 180, end: 330, title: 'Risk Assesment', location: 'Softlayer', discription: 'With the deploy coming this weekend, it\'s time for the v155 product risk assesment'},
     { id: 6, start: 960, end: 1020, title: 'App team Sync-Up', location: 'Softlayer', discription: 'Lets meet all app engineers to spend some time to evaluate overselfs.'},
-    
   ];
 
   var calendar = new RedmartSchedular.Calendar(events, {

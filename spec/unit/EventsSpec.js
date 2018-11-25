@@ -29,9 +29,9 @@ describe('Calendar Events', () => {
 
     it('should calculate positions and widths', () => {
       const expected = [
-        { id: 1, start: 60, end: 120, top: 60, left: 9, width: 300, height: 59 },
-        { id: 2, start: 100, end: 240, top: 100, left: 309, width: 300, height: 139 },
-        { id: 3, start: 700, end: 720, top: 700, left: 9, width: 600, height: 19 }
+        { id:1, start:60, end:120, top:60, left:9, width:250, height:58}, 
+        { id:2, start:100, end:240, top:100, left:259, width:250, height:138}, 
+        { id:3, start:700, end:720, top:700, left:9, width:500, height:18}
       ];
 
       calendar.addEvents(events);
@@ -56,13 +56,13 @@ describe('Calendar Events', () => {
 
     it('should calculate positions and widths', () => {
       const expected = [
-        { id: 1, start: 60, end: 179, top: 60, left: 9, width: 200, height: 118 },
-        { id: 4, start: 120, end: 239, top: 120, left: 209, width: 200, height: 118 },
-        { id: 2, start: 180, end: 299, top: 180, left: 9, width: 200, height: 118 },
-        { id: 6, start: 180, end: 360, top: 180, left: 409, width: 200, height: 179 },
-        { id: 5, start: 240, end: 330, top: 240, left: 209, width: 200, height: 89 },
-        { id: 3, start: 300, end: 419, top: 300, left: 9, width: 200, height: 118 },
-        { id: 7, start: 480, end: 540, top: 480, left: 9, width: 600, height: 59 }
+        { id:1, start:60, end:179, top:60, left:9, width:166.66666666666666, height:117}, 
+        { id:4, start:120, end:239, top:120, left:175.66666666666666, width:166.66666666666666, height:117}, 
+        { id:2, start:180, end:299, top:180, left:9, width:166.66666666666666, height:117}, 
+        { id:6, start:180, end:360, top:180, left:342.3333333333333, width:166.66666666666666, height:178}, 
+        { id:5, start:240, end:330, top:240, left:175.66666666666666, width:166.66666666666666, height:88}, 
+        { id:3, start:300, end:419, top:300, left:9, width:166.66666666666666, height:117}, 
+        { id:7, start:480, end:540, top:480, left:9, width:500, height:58}
       ];
 
       calendar.addEvents(events);
@@ -83,9 +83,9 @@ describe('Calendar Events', () => {
 
     it('should calculate positions and widths', () => {
       const expected = [
-        { id: 1, start: 0, end: 59, top: 0, left: 9, width: 600, height: 58 },
-        { id: 2, start: 60, end: 119, top: 60, left: 9, width: 600, height: 58 },
-        { id: 3, start: 120, end: 179, top: 120, left: 9, width: 600, height: 58 }
+        { id:1, start:0, end:59, top:0, left:9, width:500, height:57}, 
+        { id:2, start:60, end:119, top:60, left:9, width:500, height:57}, 
+        { id:3, start:120, end:179, top:120, left:9, width:500, height:57}
       ];
 
       calendar.addEvents(events);
@@ -107,10 +107,10 @@ describe('Calendar Events', () => {
 
     it('should calculate positions and widths', () => {
       const expected = [
-        { id: 1, start: 30, end: 180, top: 30, left: 9, width: 600, height: 149 },
-        { id: 2, start: 540, end: 600, top: 540, left: 9, width: 300, height: 59 },
-        { id: 3, start: 560, end: 620, top: 560, left: 309, width: 300, height: 59 },
-        { id: 4, start: 610, end: 670, top: 610, left: 9, width: 300, height: 59 }
+        { id:1, start:30, end:180, top:30, left:9, width:500, height:148}, 
+        { id:2, start:540, end:600, top:540, left:9, width:250, height:58}, 
+        { id:3, start:560, end:620, top:560, left:259, width:250, height:58}, 
+        { id:4, start:610, end:670, top:610, left:9, width:250, height:58}
       ];
 
       calendar.addEvents(events);
@@ -119,7 +119,7 @@ describe('Calendar Events', () => {
   });
 
 
-  describe('without events', () => {
+  describe('without events',  () => {
     it('requires an array of events', () => {
       expect(() => {
         calendar.addEvents();

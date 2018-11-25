@@ -84,7 +84,7 @@
         this.eventCollection.calculateCollisionGroups();
         this.eventCollection.calculatePositions();
 
-        // Return the raw events for testing purposes
+        console.log(this.eventCollection.raw());
         return this.eventCollection.raw();
       }
 
@@ -296,7 +296,7 @@
             //
             // [[A, B, C],
             //  [D, E],
-            //  [F]]
+            //  [F]
             //
 
             // Increment columns until spot found
@@ -365,7 +365,7 @@
        * 
        * @param {Array} matrix A two-dimensional array of event ids.
        * @param {Numer} col    The column of the matrix to search.
-       * @returns {Number | Boolean} The row of the last event inthe column.
+       * @returns {Number | Boolean} The row of the last event in the column.
        *                             Returns false if no element was found.
        */
       _getMatrixColumnLastRow(matrix, col) {
@@ -397,11 +397,11 @@
      */
     class Event {
       constructor(event) {
-        if (!event.id)
+        if (!event.hasOwnProperty('id'))
           throw TypeError('Event id is required.');
-        if (!event.start)
+        if (!event.hasOwnProperty('start'))
           throw TypeError('Event start is required.');
-        if (!event.end)
+        if (!event.hasOwnProperty('end'))
           throw TypeError('Event end is required.');
         if (event.end - event.start <= 0)
           throw TypeError('Event end time must be greater than start time.');
