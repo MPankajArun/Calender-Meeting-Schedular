@@ -116,7 +116,7 @@
 
   RedmartSchedular.Calendar.EventCollection = ((() => {
     const defaults = {
-      containerWidth: 600,
+      containerWidth: 700,
       // Decrement offset by 1 since the left container border visually adds 1 pixel
       eventLeftOffset: 9,
       eventHorizontalPadding: 100,

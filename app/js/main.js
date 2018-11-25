@@ -31,6 +31,7 @@
     delete calendar;
   };
 
+  // Add a new Event to Calender
   document.getElementById('submit-btn').addEventListener('click', function(event) {
     var eventObject = {
       'id': ++events.length,
@@ -44,8 +45,10 @@
     new RedmartSchedular.Calendar(events, {
       container: 'calendar-event-container'
     }).render();
-    showAlertMessage(); 
+    showAlertMessage();
+    resetForm(); 
   });
+
 
   function showAlertMessage() {
     document.querySelector(".webform-confirmation").style.display = 'inline-flex';
@@ -55,8 +58,13 @@
   function hideAlertMessage() {
     setTimeout(() => {
       document.querySelector(".webform-confirmation").style.display = 'none';
-    }, 1000);
-    
+    }, 1000);  
+  }
+
+  function resetForm() {
+    _.each(document.getElementsByTagName('input'), (input) => {
+      input.value = '';
+    });
   }
 
 }))(window, document);

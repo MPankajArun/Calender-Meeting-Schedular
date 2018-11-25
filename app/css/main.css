@@ -19,7 +19,7 @@ body {
 }
 
 .calendar {
-  width: 600px;
+  width: 700px;
 }
 
 .calendar .calendar-time-column {
@@ -55,7 +55,7 @@ body {
 
 .calendar .calendar-event-container {
   position: relative;
-  width: 520px;
+  width: 620px;
   height: 1440px;
   margin: 7px 0 0 10px;
   float: left;
