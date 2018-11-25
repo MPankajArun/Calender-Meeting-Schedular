@@ -33,11 +33,9 @@ Build a webpage that uses the function from PART 1, to show the following meetin
 * Extensibility of the function.
 
 
-### Organization and Style
+### Project Organization
 
 Calendar is a class of the RedmartSchedular module. EventCollection and Event are classes of Calendar properties so that they may be referenced via Calendar.EventCollection and Calendar.Event, respectively. A class for the Event exists beyond what the normal event object so that it will be more robust as features are added to the Calendar and the Event object has more functionality added to it.
-
-Method documentation is in JSDoc style and coding style is roughly that of [idiomatic.js](https://github.com/rwldrn/idiomatic.js).
 
 ### Dependencies
 
@@ -46,3 +44,14 @@ The only dependency for the calendar is [Lo-Dash](https://github.com/bestiejs/lo
 ### Testing
 
 Unit tests are used to verify the expected output of the left and top positions as well as the widths and heights of the events after processing. A few sample event collections are tested. Unit tests are performed using [Jasmine](https://github.com/pivotal/jasmine) by navigating to `spec/SpecRunner.html` in the browser.
+
+### ToDo (Future Scope)
+
+* Add support for Delete and Update an Event based on id
+* Drag and Drop Support to Update meeting timings
+* Write Integration test cases for view
+* Cosmetic changes to Calendar, Modal, and Form
+* Make it responsible using bootstrap or any other library
+* Extend Event Object to include other properties such as Guests, Organizer etc.
+* Extend MeetingSchedular for Week, Month and Year.
+* Write API for Events.
