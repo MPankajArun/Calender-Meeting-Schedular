@@ -59,6 +59,7 @@ Unit tests are performed using [Jasmine](https://github.com/pivotal/jasmine) by 
 * Add support for Delete and Update an Event based on id.
 * Drag and Drop Support to Update meeting timings.
 * Write Integration test cases for view.
+* Proper Error handling for all workflows
 * Cosmetic changes to Calendar, Modal, and Form.
 * Make it responsible using bootstrap or any other library.
 * Extend Event Object to include other properties such as Guests, Organizer etc.
