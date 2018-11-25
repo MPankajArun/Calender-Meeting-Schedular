@@ -37,6 +37,9 @@ Build a webpage that uses the function from PART 1, to show the following meetin
 
 Calendar is a class of the RedmartSchedular module. EventCollection and Event are classes of Calendar properties so that they may be referenced via Calendar.EventCollection and Calendar.Event, respectively. A class for the Event exists beyond what the normal event object so that it will be more robust as features are added to the Calendar and the Event object has more functionality added to it.
 
+GitHub Repo: [Click Here](https://github.com/MPankajArun/Calender-Meeting-Schedular)
+Live Demo: [Click Here](https://codepen.io/mpankajarun/project/full/Zerrba/)
+
 #### How to Run
 Navigate to `app/index.html` and open in any browser of your choice. Also go to Developer Console to see Part 1 Output.
 
